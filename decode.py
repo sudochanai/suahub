@@ -1,0 +1,27 @@
+import base64
+import zlib
+
+# Base64 encoded and compressed string
+encoded_compressed_str = '''
+jVVhb+I4EP2eX2FtK1GkS4FCdbfoOG0I0KbgAE1YulpVVQgmhJAY2aYh7PW/39gJhd5xq7VEgmfevLFn5il/XmiOz8KN4Cj2Ei8gczTL0FKIDW9WKkEoltvZtU/jynQZCuJ7ovaH1qMMYcoICpMF/Q29hjwUPw+pjGhKGF+S9Vov0ukLyvR7z4/ArnvJXB+RRBAuYKtdIAYWGqMW6ptGNKkue253t3ns8d2TwyM/3z/IPa5V2UMtSPrjVku7+EvTFtvEFyFN0B0R+si04Igs9pTlh4ZgXW58aQTuL7lBrpJJ480WktteTEpgaKFLkrw2zSEeTdzuo23g7hGMvWS78HyxZYTl4CuZbRqHw9mK+AJNw6R+83LgdDK4Vly+Pg07IaNzsi6h9/WrZDLsyPJo4BMOyVL6UW3aN2/orl1C+gJd/RKrS4W3Hi0zHvreGpOYsgxVUO2uXT6mGjHqE84pK/30wO+w8rUs6jHeEZTBoJWORz0b3wl51GHhK0F/I0w8DlXTC4AT7gnSnS0cGB7ygG4b6R5H38NEPB8zAdGcpvwrzBT0v/R/mYYbwmBCkuBQBdPbyIFRRG/qqR6MQOuSwwBpbxoMqpdQsSTshSYkn1Zq9cTK6facaa02t8ygYWdpMHS7HK/GfOiOg4Fp3NhO2hg6Brc6UTbodHewD/A+kL7G0JR2q2GZaSb/Y7dbA/sOdybSn9nKH0lbQ8Xl/n0Rdwtxgb0fH+IAAxyrAHyB8kl7/jZuwX8LHHXspDvsKn7gSW9sdTa8U3ndSUuTq7j3QU2t/yoMMHQrYKCkuD5ph+FCJ5Dm0Sqnookurz7yfv8oxeeydiqbc/gPapR4qYyzQKU0QIBYzvmlhqR3CN4LQelLvPWXcJVBx0qhYnXVjdUEKuPnlVx9kxWvqq7kFUsHHb+R+3xVTais6hheGdzeyy5YO+CrAe4WfnvA1HEofTjvruwodEtOC+SpA6Yqc9uKU01PhhWfmpZs6BTdXnVlh3d9x+hr79I7d8ujfOGuhRbP4Q4yfS4jt60VUkKFls4F/EttwP7pi6ZNGXwE9HvKBSqGQ8omIEIK7mVGGbygxguzfTerPfS+TW1rMP1setHXztxs/35Q05MTRE+ZIcbJ8nUSGiG+D7JxZgV9p/3ZMqNgMNmMvGkjeciMjfYP
+'''
+
+# Step 1: Decode the Base64 string
+compressed_data = base64.b64decode(encoded_compressed_str)
+
+# Step 2: Decompress the data using zlib
+decompressed_data = zlib.decompress(compressed_data)
+
+# Step 3: Convert the decompressed bytes to a string
+decoded_message = decompressed_data.decode('ascii')
+
+# Step 4: Print the decoded message
+print(decoded_message)
+
+
+
+
+{w4rmup_
+t00_E4sy_
+1f_y0u_Ask_
+m3_8b5c6452b7348b95cede504aff4801f9}
